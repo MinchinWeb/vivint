@@ -40,6 +40,7 @@ extensions = [
     'releases',
     'alabaster',
     # 'cloud_sptheme.ext.relbar_toc',
+    'cloud_sptheme.ext.index_styling',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -143,7 +144,8 @@ html_theme = 'cloud'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {"roottarget": index_doc}
+html_theme_options = {"roottarget": index_doc,
+                      "googleanalytics_id": "UA-384291-3"}
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [csp.get_theme_dir()]
