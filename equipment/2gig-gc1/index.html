@@ -1,0 +1,1216 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>2GIG GoControl 1 &#8212; Vivint Technician Help 1.1.0 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/cloud.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Noticia+Text|Open+Sans|Droid+Sans+Mono" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '1.1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../../_static/jquery.cookie.js"></script>
+    <script type="text/javascript" src="../../_static/cloud.js"></script>
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" />
+    <link rel="top" title="Vivint Technician Help 1.1.0 documentation" href="../../contents/" />
+    <link rel="next" title="Alarm.com V510IR Indoor Camera" href="../adc-v520ir/" />
+    <link rel="prev" title="Welcome to Vivint Technician Help!" href="../../" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1"><script type="text/javascript">
+var ga_enabled = !$.cookie('disable-ga');
+if(ga_enabled){
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-384291-3']);
+  _gaq.push(['_setCookiePath', '/']);
+  _gaq.push(['_setDetectFlash', false]);
+  _gaq.push(['_trackPageview']);
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+}
+</script>
+  </head>
+  <body role="document">
+    <div class="relbar-top">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../adc-v520ir/" title="Alarm.com V510IR Indoor Camera"
+             accesskey="N">next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="../../" title="Welcome to Vivint Technician Help!"
+             accesskey="P">previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../../">Vivint Technician Help 1.1.0 documentation</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    </div>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="gig-gocontrol-1">
+<h1>2GIG GoControl 1<a class="headerlink" href="#gig-gocontrol-1" title="Permalink to this headline">¶</a></h1>
+<span class="target" id="gig-gc1"></span><div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">The following is specifically for the 2Gig GoContol (aka the &#8220;GoControl One&#8221;), but may prove useful for the Vivint SkyPanel and the GoContol 3.</p>
+</div>
+</div>
+<div class="section" id="features">
+<h2>Features<a class="headerlink" href="#features" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="programming-guide">
+<h2>Programming Guide<a class="headerlink" href="#programming-guide" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="q1-wireless-zones">
+<h3>Q1. Wireless Zones<a class="headerlink" href="#q1-wireless-zones" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="sensor-type">
+<h4>Sensor Type<a class="headerlink" href="#sensor-type" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="1%" />
+<col width="13%" />
+<col width="86%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>1</td>
+<td>Entry/Exit 1</td>
+<td>Main doors. Gives an entry delay.</td>
+</tr>
+<tr class="row-even"><td>2</td>
+<td>Entry/Exit 2</td>
+<td>Secondary doors. Gives an entry delay, possibly different from Type 1. I often use these for garage overhead and basement doors.</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Perimeter</td>
+<td>Windows and &#8220;window-like&#8221; (e.g. Glass breaks, doors that aren&#8217;t typically used for entry and exit). Unlike Types 1 &amp; 2, these sensors, when opened, set off the alarm without delay.</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Interior Follower</td>
+<td>Motion detectors, although I usually use Type 10 instead.</td>
+</tr>
+<tr class="row-odd"><td>5</td>
+<td>Trouble Day/Alarm Night</td>
+<td>I&#8217;ve never actually used this...</td>
+</tr>
+<tr class="row-even"><td>6</td>
+<td>24 Hour Silent</td>
+<td>Similiar to the Duress Code.</td>
+</tr>
+<tr class="row-odd"><td>7</td>
+<td>24 Hour Audible</td>
+<td>Similiar to the Police &#8220;panic&#8221; button.</td>
+</tr>
+<tr class="row-even"><td>8</td>
+<td>24 hour Auxiliary</td>
+<td>Flood and Freeze detectors. Has a series of sub-types to cover medical issues, general panics, freeze (low temperatue), water, etc; be sure to select the right one.</td>
+</tr>
+<tr class="row-odd"><td>9</td>
+<td>Fire</td>
+<td>Smoke Detectors. Doesn&#8217;t require verification.</td>
+</tr>
+<tr class="row-even"><td>10</td>
+<td>Interior with Delay</td>
+<td>Motion Detectors. When set off, gives you a delay before setting off the alarm, similiar to Type 1.</td>
+</tr>
+<tr class="row-odd"><td>14</td>
+<td>Carbon Monoxide</td>
+<td></td>
+</tr>
+<tr class="row-even"><td>16</td>
+<td>Fire (with Verification)</td>
+<td>&#8220;Firefighters&#8221;. Used for a sensor that doesn&#8217;t have the fire detection on-board, but relies to something else to detect the fire.</td>
+</tr>
+<tr class="row-odd"><td>23</td>
+<td>No Response</td>
+<td>Information-only sensors. Won&#8217;t set off the alarm. Also useful as a temporary measure if a sensor is mis- behaving.</td>
+</tr>
+<tr class="row-even"><td>24</td>
+<td>Silent Burglary</td>
+<td>I&#8217;ve never used this.</td>
+</tr>
+<tr class="row-odd"><td>25</td>
+<td>Repeater</td>
+<td>For signal repeaters. Not available on GoControl; use <em>Type 8 &#8211; Contact</em> instead.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="equipement-codes">
+<h4>Equipement Codes<a class="headerlink" href="#equipement-codes" title="Permalink to this headline">¶</a></h4>
+<p>If the peice of equipment you&#8217;re installing insn&#8217;t listed, select <em>0000</em>,
+and then on the next option enter the approriate 4 digit code.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This list is incomplete.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="5%" />
+<col width="95%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0000</td>
+<td>Other</td>
+</tr>
+<tr class="row-even"><td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td>0862</td>
+<td>2GIG-DW10-345 Thin D/W (Surface) Contact</td>
+</tr>
+<tr class="row-even"><td>0863</td>
+<td>2GIG-DW20-345 Recessed Door Contact</td>
+</tr>
+<tr class="row-odd"><td>0869</td>
+<td>2GIG-PIR-345 Motion With Pet Immunity</td>
+</tr>
+<tr class="row-even"><td>0864</td>
+<td>2GIG-GB1-345 Glass Break Detector</td>
+</tr>
+<tr class="row-odd"><td>0872</td>
+<td>2GIG-SMKE1-345 Smoke Detector (USA)</td>
+</tr>
+<tr class="row-even"><td>0871</td>
+<td>2GIG-SMK1-345C Smoke Detector (Canada)</td>
+</tr>
+<tr class="row-odd"><td>0868</td>
+<td>2GIG-PANIC1-345 Panic Button Remote</td>
+</tr>
+<tr class="row-even"><td>0860</td>
+<td>2GIG-CO1-345 CO Detector (USA)</td>
+</tr>
+<tr class="row-odd"><td>0859</td>
+<td>2GIG-CO1-345C CO Detector (Canada)</td>
+</tr>
+<tr class="row-even"><td>0873</td>
+<td>2GIG-TAKE-345 Takeover Module</td>
+</tr>
+<tr class="row-odd"><td>0866</td>
+<td>2GIG-KEY1-345 Keyfob</td>
+</tr>
+<tr class="row-even"><td>0867</td>
+<td>2GIG-PAD1-345 Keypad</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td>0637</td>
+<td>Honeywell D/W &#8220;5816&#8221;</td>
+</tr>
+<tr class="row-odd"><td>0470</td>
+<td>Honeywell R-D/W &#8220;5818MNL&#8221;</td>
+</tr>
+<tr class="row-even"><td>0533</td>
+<td>Honeywell PIR &#8220;5890&#8221;</td>
+</tr>
+<tr class="row-odd"><td>0530</td>
+<td>Honeywell PIR &#8220;5894PI&#8221;</td>
+</tr>
+<tr class="row-even"><td>0519</td>
+<td>Honeywell Glass Break &#8220;5853&#8221;</td>
+</tr>
+<tr class="row-odd"><td>0589</td>
+<td>Honeywell Smoke &#8220;5008W3&#8221;</td>
+</tr>
+<tr class="row-even"><td>0557</td>
+<td>Honeywell Heat Sensor &#8220;5809&#8221;</td>
+</tr>
+<tr class="row-odd"><td>0624</td>
+<td>Honeywell Flood Sensor &#8220;5821&#8221;</td>
+</tr>
+<tr class="row-even"><td>0491</td>
+<td>Honeywell Panic Pendant &#8220;5802MN2&#8221;</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="voice-descirptions">
+<h4>Voice Descirptions<a class="headerlink" href="#voice-descirptions" title="Permalink to this headline">¶</a></h4>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">This list is incomplete.</p>
+</div>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="75%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><strong>002</strong></td>
+<td><strong>abort</strong></td>
+</tr>
+<tr class="row-even"><td>003</td>
+<td>ac</td>
+</tr>
+<tr class="row-odd"><td>004</td>
+<td>access</td>
+</tr>
+<tr class="row-even"><td>005</td>
+<td>alarm</td>
+</tr>
+<tr class="row-odd"><td>006</td>
+<td>and</td>
+</tr>
+<tr class="row-even"><td>007</td>
+<td>announcement</td>
+</tr>
+<tr class="row-odd"><td>008</td>
+<td>area</td>
+</tr>
+<tr class="row-even"><td>009</td>
+<td>arm</td>
+</tr>
+<tr class="row-odd"><td>010</td>
+<td>armed</td>
+</tr>
+<tr class="row-even"><td>011</td>
+<td>arming</td>
+</tr>
+<tr class="row-odd"><td>012</td>
+<td>at</td>
+</tr>
+<tr class="row-even"><td>013</td>
+<td>attic</td>
+</tr>
+<tr class="row-odd"><td>014</td>
+<td>audio</td>
+</tr>
+<tr class="row-even"><td>015</td>
+<td>auto</td>
+</tr>
+<tr class="row-odd"><td>016</td>
+<td>automation</td>
+</tr>
+<tr class="row-even"><td>017</td>
+<td>auxiliary</td>
+</tr>
+<tr class="row-odd"><td>018</td>
+<td>away</td>
+</tr>
+<tr class="row-even"><td><strong>019</strong></td>
+<td><strong>babys</strong></td>
+</tr>
+<tr class="row-odd"><td>020</td>
+<td>back</td>
+</tr>
+<tr class="row-even"><td>021</td>
+<td>basement</td>
+</tr>
+<tr class="row-odd"><td>022</td>
+<td>bathroom</td>
+</tr>
+<tr class="row-even"><td>023</td>
+<td>battery</td>
+</tr>
+<tr class="row-odd"><td>024</td>
+<td>bedroom</td>
+</tr>
+<tr class="row-even"><td>025</td>
+<td>bonus</td>
+</tr>
+<tr class="row-odd"><td>026</td>
+<td>break</td>
+</tr>
+<tr class="row-even"><td>027</td>
+<td>button</td>
+</tr>
+<tr class="row-odd"><td>028</td>
+<td>bypass</td>
+</tr>
+<tr class="row-even"><td>029</td>
+<td>bypassed</td>
+</tr>
+<tr class="row-odd"><td><strong>030</strong></td>
+<td><strong>cabinet</strong></td>
+</tr>
+<tr class="row-even"><td>031</td>
+<td>cancel</td>
+</tr>
+<tr class="row-odd"><td>032</td>
+<td>carbon monoxide</td>
+</tr>
+<tr class="row-even"><td>033</td>
+<td>cellar</td>
+</tr>
+<tr class="row-odd"><td>034</td>
+<td>cellular</td>
+</tr>
+<tr class="row-even"><td>035</td>
+<td>cell radio</td>
+</tr>
+<tr class="row-odd"><td>036</td>
+<td>center</td>
+</tr>
+<tr class="row-even"><td>037</td>
+<td>check</td>
+</tr>
+<tr class="row-odd"><td>038</td>
+<td>chest</td>
+</tr>
+<tr class="row-even"><td>039</td>
+<td>childrens</td>
+</tr>
+<tr class="row-odd"><td>040</td>
+<td>chime</td>
+</tr>
+<tr class="row-even"><td>041</td>
+<td>closet</td>
+</tr>
+<tr class="row-odd"><td>042</td>
+<td>code</td>
+</tr>
+<tr class="row-even"><td>043</td>
+<td>communications</td>
+</tr>
+<tr class="row-odd"><td>044</td>
+<td>computer</td>
+</tr>
+<tr class="row-even"><td>045</td>
+<td>control</td>
+</tr>
+<tr class="row-odd"><td>046</td>
+<td>cool</td>
+</tr>
+<tr class="row-even"><td>047</td>
+<td>crawl</td>
+</tr>
+<tr class="row-odd"><td>048</td>
+<td>current</td>
+</tr>
+<tr class="row-even"><td><strong>049</strong></td>
+<td><strong>day</strong></td>
+</tr>
+<tr class="row-odd"><td>050</td>
+<td>degrees</td>
+</tr>
+<tr class="row-even"><td>051</td>
+<td>den</td>
+</tr>
+<tr class="row-odd"><td>052</td>
+<td>detector</td>
+</tr>
+<tr class="row-even"><td>053</td>
+<td>dim</td>
+</tr>
+<tr class="row-odd"><td>054</td>
+<td>dining</td>
+</tr>
+<tr class="row-even"><td>055</td>
+<td>disarm</td>
+</tr>
+<tr class="row-odd"><td>056</td>
+<td>disarmed</td>
+</tr>
+<tr class="row-even"><td>057</td>
+<td>dock</td>
+</tr>
+<tr class="row-odd"><td>058</td>
+<td>door</td>
+</tr>
+<tr class="row-even"><td>059</td>
+<td>downstairs</td>
+</tr>
+<tr class="row-odd"><td>060</td>
+<td>driveway</td>
+</tr>
+<tr class="row-even"><td><strong>061</strong></td>
+<td><strong>east</strong></td>
+</tr>
+<tr class="row-odd"><td>062</td>
+<td>eight</td>
+</tr>
+<tr class="row-even"><td>063</td>
+<td>eighteen</td>
+</tr>
+<tr class="row-odd"><td>064</td>
+<td>eighty</td>
+</tr>
+<tr class="row-even"><td>065</td>
+<td>electric</td>
+</tr>
+<tr class="row-odd"><td>066</td>
+<td>eleven</td>
+</tr>
+<tr class="row-even"><td>067</td>
+<td>emergency</td>
+</tr>
+<tr class="row-odd"><td>068</td>
+<td>enter</td>
+</tr>
+<tr class="row-even"><td>069</td>
+<td>entrance</td>
+</tr>
+<tr class="row-odd"><td>070</td>
+<td>entry</td>
+</tr>
+<tr class="row-even"><td>071</td>
+<td>error</td>
+</tr>
+<tr class="row-odd"><td>072</td>
+<td>exercise</td>
+</tr>
+<tr class="row-even"><td>073</td>
+<td>exit</td>
+</tr>
+<tr class="row-odd"><td>074</td>
+<td>exit now</td>
+</tr>
+<tr class="row-even"><td>075</td>
+<td>exterior</td>
+</tr>
+<tr class="row-odd"><td>076</td>
+<td>external</td>
+</tr>
+<tr class="row-even"><td><strong>077</strong></td>
+<td><strong>failure</strong></td>
+</tr>
+<tr class="row-odd"><td>078</td>
+<td>family</td>
+</tr>
+<tr class="row-even"><td>079</td>
+<td>fan</td>
+</tr>
+<tr class="row-odd"><td>080</td>
+<td>fifteen</td>
+</tr>
+<tr class="row-even"><td>081</td>
+<td>fifty</td>
+</tr>
+<tr class="row-odd"><td>082</td>
+<td>fire</td>
+</tr>
+<tr class="row-even"><td>083</td>
+<td>fire alert</td>
+</tr>
+<tr class="row-odd"><td>084</td>
+<td>fire detector</td>
+</tr>
+<tr class="row-even"><td>085</td>
+<td>first</td>
+</tr>
+<tr class="row-odd"><td>086</td>
+<td>five</td>
+</tr>
+<tr class="row-even"><td>087</td>
+<td>flood</td>
+</tr>
+<tr class="row-odd"><td>088</td>
+<td>floor</td>
+</tr>
+<tr class="row-even"><td>089</td>
+<td>fluid</td>
+</tr>
+<tr class="row-odd"><td>090</td>
+<td>foil</td>
+</tr>
+<tr class="row-even"><td>091</td>
+<td>for</td>
+</tr>
+<tr class="row-odd"><td>092</td>
+<td>forty</td>
+</tr>
+<tr class="row-even"><td>093</td>
+<td>four</td>
+</tr>
+<tr class="row-odd"><td>094</td>
+<td>fourteen</td>
+</tr>
+<tr class="row-even"><td>095</td>
+<td>fourth</td>
+</tr>
+<tr class="row-odd"><td>096</td>
+<td>freeze</td>
+</tr>
+<tr class="row-even"><td>097</td>
+<td>freezer</td>
+</tr>
+<tr class="row-odd"><td>098</td>
+<td>front</td>
+</tr>
+<tr class="row-even"><td>099</td>
+<td>furnace</td>
+</tr>
+<tr class="row-odd"><td><strong>100</strong></td>
+<td><strong>game</strong></td>
+</tr>
+<tr class="row-even"><td>101</td>
+<td>garage</td>
+</tr>
+<tr class="row-odd"><td>102</td>
+<td>gas</td>
+</tr>
+<tr class="row-even"><td>103</td>
+<td>glass</td>
+</tr>
+<tr class="row-odd"><td>104</td>
+<td>glassbreak</td>
+</tr>
+<tr class="row-even"><td>105</td>
+<td>guest</td>
+</tr>
+<tr class="row-odd"><td>106</td>
+<td>gun</td>
+</tr>
+<tr class="row-even"><td><strong>107</strong></td>
+<td><strong>hall</strong></td>
+</tr>
+<tr class="row-odd"><td>108</td>
+<td>hallway</td>
+</tr>
+<tr class="row-even"><td>109</td>
+<td>hanging</td>
+</tr>
+<tr class="row-odd"><td>110</td>
+<td>hang up</td>
+</tr>
+<tr class="row-even"><td>111</td>
+<td>heat</td>
+</tr>
+<tr class="row-odd"><td>112</td>
+<td>high</td>
+</tr>
+<tr class="row-even"><td>113</td>
+<td>home</td>
+</tr>
+<tr class="row-odd"><td>114</td>
+<td>house</td>
+</tr>
+<tr class="row-even"><td><strong>115</strong></td>
+<td><strong>ice</strong></td>
+</tr>
+<tr class="row-odd"><td>116</td>
+<td>inside</td>
+</tr>
+<tr class="row-even"><td>117</td>
+<td>instant</td>
+</tr>
+<tr class="row-odd"><td>118</td>
+<td>interior</td>
+</tr>
+<tr class="row-even"><td>119</td>
+<td>intrusion</td>
+</tr>
+<tr class="row-odd"><td>120</td>
+<td>is</td>
+</tr>
+<tr class="row-even"><td><strong>121</strong></td>
+<td><strong>key</strong></td>
+</tr>
+<tr class="row-odd"><td>122</td>
+<td>keyfob</td>
+</tr>
+<tr class="row-even"><td>123</td>
+<td>keypad</td>
+</tr>
+<tr class="row-odd"><td>124</td>
+<td>kids</td>
+</tr>
+<tr class="row-even"><td>125</td>
+<td>kitchen</td>
+</tr>
+<tr class="row-odd"><td><strong>126</strong></td>
+<td><strong>laundry</strong></td>
+</tr>
+<tr class="row-even"><td>127</td>
+<td>left</td>
+</tr>
+<tr class="row-odd"><td>128</td>
+<td>level</td>
+</tr>
+<tr class="row-even"><td>129</td>
+<td>library</td>
+</tr>
+<tr class="row-odd"><td>130</td>
+<td>light</td>
+</tr>
+<tr class="row-even"><td>131</td>
+<td>lights</td>
+</tr>
+<tr class="row-odd"><td>132</td>
+<td>liquor</td>
+</tr>
+<tr class="row-even"><td>133</td>
+<td>living</td>
+</tr>
+<tr class="row-odd"><td>134</td>
+<td>loading</td>
+</tr>
+<tr class="row-even"><td>135</td>
+<td>lock</td>
+</tr>
+<tr class="row-odd"><td>136</td>
+<td>loft</td>
+</tr>
+<tr class="row-even"><td>137</td>
+<td>low</td>
+</tr>
+<tr class="row-odd"><td><strong>138</strong></td>
+<td><strong>main</strong></td>
+</tr>
+<tr class="row-even"><td>139</td>
+<td>maintenance</td>
+</tr>
+<tr class="row-odd"><td>140</td>
+<td>master</td>
+</tr>
+<tr class="row-even"><td>141</td>
+<td>medical</td>
+</tr>
+<tr class="row-odd"><td>142</td>
+<td>medicine</td>
+</tr>
+<tr class="row-even"><td>143</td>
+<td>menu</td>
+</tr>
+<tr class="row-odd"><td>144</td>
+<td>middle</td>
+</tr>
+<tr class="row-even"><td>145</td>
+<td>monitor</td>
+</tr>
+<tr class="row-odd"><td>146</td>
+<td>motion</td>
+</tr>
+<tr class="row-even"><td>147</td>
+<td>motion detector</td>
+</tr>
+<tr class="row-odd"><td>148</td>
+<td>mud</td>
+</tr>
+<tr class="row-even"><td><strong>149</strong></td>
+<td><strong>nine</strong></td>
+</tr>
+<tr class="row-odd"><td>150</td>
+<td>nineteen</td>
+</tr>
+<tr class="row-even"><td>151</td>
+<td>ninety</td>
+</tr>
+<tr class="row-odd"><td>152</td>
+<td>north</td>
+</tr>
+<tr class="row-even"><td>153</td>
+<td>not</td>
+</tr>
+<tr class="row-odd"><td>154</td>
+<td>not ready</td>
+</tr>
+<tr class="row-even"><td>155</td>
+<td>no delay</td>
+</tr>
+<tr class="row-odd"><td>156</td>
+<td>no entry delay</td>
+</tr>
+<tr class="row-even"><td>157</td>
+<td>nursery</td>
+</tr>
+<tr class="row-odd"><td><strong>158</strong></td>
+<td><strong>off</strong></td>
+</tr>
+<tr class="row-even"><td>159</td>
+<td>o#ce</td>
+</tr>
+<tr class="row-odd"><td>160</td>
+<td>on</td>
+</tr>
+<tr class="row-even"><td>161</td>
+<td>one</td>
+</tr>
+<tr class="row-odd"><td>162</td>
+<td>one hundred</td>
+</tr>
+<tr class="row-even"><td>163</td>
+<td>output</td>
+</tr>
+<tr class="row-odd"><td>164</td>
+<td>outside</td>
+</tr>
+<tr class="row-even"><td><strong>165</strong></td>
+<td><strong>panel</strong></td>
+</tr>
+<tr class="row-odd"><td>166</td>
+<td>panic</td>
+</tr>
+<tr class="row-even"><td>167</td>
+<td>pantry</td>
+</tr>
+<tr class="row-odd"><td>168</td>
+<td>patio</td>
+</tr>
+<tr class="row-even"><td>169</td>
+<td>perimeter</td>
+</tr>
+<tr class="row-odd"><td>170</td>
+<td>phone line</td>
+</tr>
+<tr class="row-even"><td>171</td>
+<td>play</td>
+</tr>
+<tr class="row-odd"><td>172</td>
+<td>police</td>
+</tr>
+<tr class="row-even"><td>173</td>
+<td>pool</td>
+</tr>
+<tr class="row-odd"><td>174</td>
+<td>pound</td>
+</tr>
+<tr class="row-even"><td>175</td>
+<td>power</td>
+</tr>
+<tr class="row-odd"><td>176</td>
+<td>press</td>
+</tr>
+<tr class="row-even"><td>177</td>
+<td>previous</td>
+</tr>
+<tr class="row-odd"><td>178</td>
+<td>pump</td>
+</tr>
+<tr class="row-even"><td><strong>179</strong></td>
+<td><strong>radio</strong></td>
+</tr>
+<tr class="row-odd"><td>180</td>
+<td>ready</td>
+</tr>
+<tr class="row-even"><td>181</td>
+<td>rear</td>
+</tr>
+<tr class="row-odd"><td>182</td>
+<td>relay</td>
+</tr>
+<tr class="row-even"><td>183</td>
+<td>remote</td>
+</tr>
+<tr class="row-odd"><td>184</td>
+<td>repeat</td>
+</tr>
+<tr class="row-even"><td>185</td>
+<td>rf jam</td>
+</tr>
+<tr class="row-odd"><td>186</td>
+<td>right</td>
+</tr>
+<tr class="row-even"><td>187</td>
+<td>room</td>
+</tr>
+<tr class="row-odd"><td><strong>188</strong></td>
+<td><strong>safe</strong></td>
+</tr>
+<tr class="row-even"><td>189</td>
+<td>second</td>
+</tr>
+<tr class="row-odd"><td>190</td>
+<td>security</td>
+</tr>
+<tr class="row-even"><td>191</td>
+<td>sensor</td>
+</tr>
+<tr class="row-odd"><td>192</td>
+<td>sensors</td>
+</tr>
+<tr class="row-even"><td>193</td>
+<td>session</td>
+</tr>
+<tr class="row-odd"><td>194</td>
+<td>set</td>
+</tr>
+<tr class="row-even"><td>195</td>
+<td>seven</td>
+</tr>
+<tr class="row-odd"><td>196</td>
+<td>seventeen</td>
+</tr>
+<tr class="row-even"><td>197</td>
+<td>seventy</td>
+</tr>
+<tr class="row-odd"><td>198</td>
+<td>shed</td>
+</tr>
+<tr class="row-even"><td>199</td>
+<td>shop</td>
+</tr>
+<tr class="row-odd"><td>200</td>
+<td>side</td>
+</tr>
+<tr class="row-even"><td>201</td>
+<td>silent</td>
+</tr>
+<tr class="row-odd"><td>202</td>
+<td>siren</td>
+</tr>
+<tr class="row-even"><td>203</td>
+<td>six</td>
+</tr>
+<tr class="row-odd"><td>204</td>
+<td>sixteen</td>
+</tr>
+<tr class="row-even"><td>205</td>
+<td>sixty</td>
+</tr>
+<tr class="row-odd"><td>206</td>
+<td>skylight</td>
+</tr>
+<tr class="row-even"><td>207</td>
+<td>sliding</td>
+</tr>
+<tr class="row-odd"><td>208</td>
+<td>smoke</td>
+</tr>
+<tr class="row-even"><td>209</td>
+<td>sounder</td>
+</tr>
+<tr class="row-odd"><td>210</td>
+<td>south</td>
+</tr>
+<tr class="row-even"><td>211</td>
+<td>space</td>
+</tr>
+<tr class="row-odd"><td>212</td>
+<td>spare</td>
+</tr>
+<tr class="row-even"><td>213</td>
+<td>stairs</td>
+</tr>
+<tr class="row-odd"><td>214</td>
+<td>star</td>
+</tr>
+<tr class="row-even"><td>215</td>
+<td>status</td>
+</tr>
+<tr class="row-odd"><td>216</td>
+<td>stay</td>
+</tr>
+<tr class="row-even"><td>217</td>
+<td>stop</td>
+</tr>
+<tr class="row-odd"><td>218</td>
+<td>storage</td>
+</tr>
+<tr class="row-even"><td>219</td>
+<td>study</td>
+</tr>
+<tr class="row-odd"><td>220</td>
+<td>sump</td>
+</tr>
+<tr class="row-even"><td>221</td>
+<td>supervision</td>
+</tr>
+<tr class="row-odd"><td><strong>222</strong></td>
+<td><strong>system</strong></td>
+</tr>
+<tr class="row-even"><td>223</td>
+<td>tamper</td>
+</tr>
+<tr class="row-odd"><td>224</td>
+<td>temperature</td>
+</tr>
+<tr class="row-even"><td>225</td>
+<td>ten</td>
+</tr>
+<tr class="row-odd"><td>226</td>
+<td>terminated</td>
+</tr>
+<tr class="row-even"><td>227</td>
+<td>thermostat</td>
+</tr>
+<tr class="row-odd"><td>228</td>
+<td>third</td>
+</tr>
+<tr class="row-even"><td>229</td>
+<td>thirteen</td>
+</tr>
+<tr class="row-odd"><td>230</td>
+<td>thirty</td>
+</tr>
+<tr class="row-even"><td>231</td>
+<td>three</td>
+</tr>
+<tr class="row-odd"><td>232</td>
+<td>to</td>
+</tr>
+<tr class="row-even"><td>233</td>
+<td>tool</td>
+</tr>
+<tr class="row-odd"><td>234</td>
+<td>transmitted</td>
+</tr>
+<tr class="row-even"><td>235</td>
+<td>transmitter</td>
+</tr>
+<tr class="row-odd"><td>236</td>
+<td>trouble</td>
+</tr>
+<tr class="row-even"><td>237</td>
+<td>turn</td>
+</tr>
+<tr class="row-odd"><td>238</td>
+<td>twelve</td>
+</tr>
+<tr class="row-even"><td>239</td>
+<td>twenty</td>
+</tr>
+<tr class="row-odd"><td>240</td>
+<td>two</td>
+</tr>
+<tr class="row-even"><td><strong>241</strong></td>
+<td><strong>unlock</strong></td>
+</tr>
+<tr class="row-odd"><td>242</td>
+<td>upper</td>
+</tr>
+<tr class="row-even"><td>243</td>
+<td>upstairs</td>
+</tr>
+<tr class="row-odd"><td>244</td>
+<td>user</td>
+</tr>
+<tr class="row-even"><td>245</td>
+<td>utility</td>
+</tr>
+<tr class="row-odd"><td><strong>246</strong></td>
+<td><strong>valve</strong></td>
+</tr>
+<tr class="row-even"><td>247</td>
+<td>voice</td>
+</tr>
+<tr class="row-odd"><td>248</td>
+<td>wall</td>
+</tr>
+<tr class="row-even"><td><strong>249</strong></td>
+<td><strong>water</strong></td>
+</tr>
+<tr class="row-odd"><td>250</td>
+<td>west</td>
+</tr>
+<tr class="row-even"><td>251</td>
+<td>window</td>
+</tr>
+<tr class="row-odd"><td>252</td>
+<td>wireless</td>
+</tr>
+<tr class="row-even"><td><strong>253</strong></td>
+<td><strong>yard</strong></td>
+</tr>
+<tr class="row-odd"><td><strong>254</strong></td>
+<td><strong>zero</strong></td>
+</tr>
+<tr class="row-even"><td>255</td>
+<td>zone</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="q2-wired-zones">
+<h3>Q2. Wired Zones<a class="headerlink" href="#q2-wired-zones" title="Permalink to this headline">¶</a></h3>
+<p>There are two &#8220;ports&#8221; at attach wired sensors to the GoControl. In general,
+they are programmed the same as wireless zones, except that their &#8220;normal
+state&#8221; must be specified.</p>
+<div class="section" id="normal-state">
+<h4>Normal State<a class="headerlink" href="#normal-state" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="3%" />
+<col width="97%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>Not Used</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Normally Closed</td>
+</tr>
+<tr class="row-odd"><td>3</td>
+<td>Normally Open</td>
+</tr>
+<tr class="row-even"><td>4</td>
+<td>Mixed with no EOL (End of Line)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="q3-keyfobs">
+<h3>Q3. Keyfobs<a class="headerlink" href="#q3-keyfobs" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="emergency-key">
+<h4>Emergency Key<a class="headerlink" href="#emergency-key" title="Permalink to this headline">¶</a></h4>
+<table border="1" class="docutils">
+<colgroup>
+<col width="7%" />
+<col width="93%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td>0</td>
+<td>Disables</td>
+</tr>
+<tr class="row-even"><td>1</td>
+<td>Auxiliary</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>Audible</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>Silent Panic</td>
+</tr>
+<tr class="row-odd"><td>4</td>
+<td>Fire</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="section" id="q4-keypads">
+<h3>Q4. Keypads<a class="headerlink" href="#q4-keypads" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper"><div class="sphinx-toc sphinxlocaltoc">
+    <h3><a href="../../contents/">Page contents</a></h3>
+    <ul>
+<li><a class="reference internal" href="#">2GIG GoControl 1</a><ul>
+<li><a class="reference internal" href="#introduction">Introduction</a></li>
+<li><a class="reference internal" href="#features">Features</a></li>
+<li><a class="reference internal" href="#programming-guide">Programming Guide</a><ul>
+<li><a class="reference internal" href="#q1-wireless-zones">Q1. Wireless Zones</a><ul>
+<li><a class="reference internal" href="#sensor-type">Sensor Type</a></li>
+<li><a class="reference internal" href="#equipement-codes">Equipement Codes</a></li>
+<li><a class="reference internal" href="#voice-descirptions">Voice Descirptions</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#q2-wired-zones">Q2. Wired Zones</a><ul>
+<li><a class="reference internal" href="#normal-state">Normal State</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#q3-keyfobs">Q3. Keyfobs</a><ul>
+<li><a class="reference internal" href="#emergency-key">Emergency Key</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#q4-keypads">Q4. Keypads</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+  </div>
+  <div class="sphinxprev">
+    <h4>Previous page</h4>
+    <p class="topless"><a href="../../"
+                          title="Previous page">&larr; Welcome to Vivint Technician Help!</a></p>
+  </div>
+  <div class="sphinxnext">
+    <h4>Next page</h4>
+    <p class="topless"><a href="../adc-v520ir/"
+                          title="Next page">&rarr; Alarm.com V510IR Indoor Camera</a></p>
+  </div>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="../../_sources/equipment/2gig-gc1.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search/" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+    
+    
+        <div class="sidebar-toggle-group no-js">
+            
+            <button class="sidebar-toggle" id="sidebar-hide" title="Hide the sidebar menu">
+                 «
+                <span class="show-for-small">hide menu</span>
+                
+            </button>
+            <button class="sidebar-toggle" id="sidebar-show" title="Show the sidebar menu">
+                
+                <span class="show-for-small">menu</span>
+                <span class="hide-for-small">sidebar</span>
+                 »
+            </button>
+        </div>
+    
+      <div class="clearer"></div>
+    </div>
+    <div class="relbar-bottom">
+        
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../adc-v520ir/" title="Alarm.com V510IR Indoor Camera"
+             >next</a> &nbsp; &nbsp;</li>
+        <li class="right" >
+          <a href="../../" title="Welcome to Vivint Technician Help!"
+             >previous</a> &nbsp; &nbsp;</li>
+    <li><a href="../../">Vivint Technician Help 1.1.0 documentation</a> &#187;</li>
+ 
+      </ul>
+    </div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, William Minchin.
+      Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+    </div><script type="text/javascript">
+    if(ga_enabled){
+        document.write("<div class=\"footer\">This page uses <a href=\"http://analytics.google.com\">Google Analytics</a> to collect statistics. ");
+        document.write("Click <button title=\"set cookie to disable analytics for this site\" class=\"link\" onclick=\"$.cookie('disable-ga', 'true', {expires: 3650, path: '/'}); window.location.reload(); return false; \">here</button> to disable analytics for this site.");
+        document.write("</div>");
+    }else{
+        document.write("<div class=\"footer\">Google Analytics has been disabled. ");
+        document.write("Click <button title=\"set cookie to re-enable analytics for this site\" class=\"link\" onclick=\"$.cookie('disable-ga', null, {path: '/'}); window.location.reload(); return false; \">here</button> to re-enable analytics for this site.");
+    };
+</script>
+    <!-- cloud_sptheme 1.4 -->
+  </body>
+</html>
