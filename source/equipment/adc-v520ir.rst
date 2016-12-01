@@ -15,6 +15,8 @@ Alarm.com V510IR Indoor Camera
 .. role:: blue
 .. role:: green
 
+.. _adc-v520ir:
+
 Introduction
 ------------
 

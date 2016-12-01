@@ -1,7 +1,9 @@
 Changelog
 =========
 
+- :release:`1.1.0 <2016-12-01>`
+- :feature:`-` add basics of :doc:`2Gig GoControl </equipment/2gig-gc1>` panel.
 - :release:`1.0.0 <2016-11-25>`
-- :feature:`-` add :ref:`transit-numbers`
+- :feature:`-` add link to :ref:`transit-numbers`
 - :feature:`-` add :doc:`ADC-520IR </equipment/adc-v520ir>`
 - :support:`-` basic setup
