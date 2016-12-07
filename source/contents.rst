@@ -14,6 +14,7 @@ Welcome to Vivint Technician Help!
 
    index
    equipment/*
+   policy/*
    links
    changelog
 
