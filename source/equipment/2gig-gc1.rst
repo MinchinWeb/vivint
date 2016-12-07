@@ -72,6 +72,13 @@ and then on the next option enter the approriate 4 digit code.
 0873 2GIG-TAKE-345 Takeover Module
 0866 2GIG-KEY1-345 Keyfob
 0867 2GIG-PAD1-345 Keypad
+\	 \
+1248 Vivint GB2 Glass Break Detector
+1249 Vivint PIR2 Motion Detector
+1250 Vivint SKEY2 Keyfob
+1251 Vivint DW11 Thin D/W (Surface) Contact
+1252 Vivint DW21R Recessed Door Contact
+1253 Vivint Panic2 Panic Pendant
 \    \
 0637 Honeywell D/W "5816"
 0470 Honeywell R-D/W "5818MNL"
