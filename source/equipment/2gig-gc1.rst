@@ -66,12 +66,18 @@ and then on the next option enter the approriate 4 digit code.
 0864 2GIG-GB1-345 Glass Break Detector
 0872 2GIG-SMKE1-345 Smoke Detector (USA)
 0871 2GIG-SMK1-345C Smoke Detector (Canada)
+1058 2GIG-SMKT3 Smoke Detector
 0868 2GIG-PANIC1-345 Panic Button Remote
 0860 2GIG-CO1-345 CO Detector (USA)
 0859 2GIG-CO1-345C CO Detector (Canada)
+1026 2GIG-CO3 CO Detector
 0873 2GIG-TAKE-345 Takeover Module
 0866 2GIG-KEY1-345 Keyfob
 0867 2GIG-PAD1-345 Keypad
+1283 2GIG-TILT1 Tilt Sensor (use loop 1)
+\	 \
+0941 RE224GT / RE224DT Resolution Wireless Repeater (GE / DSC)
+1061 RE206 Tilt Sensor
 \	 \
 1248 Vivint GB2 Glass Break Detector
 1249 Vivint PIR2 Motion Detector
@@ -89,6 +95,8 @@ and then on the next option enter the approriate 4 digit code.
 0557 Honeywell Heat Sensor "5809"
 0624 Honeywell Flood Sensor "5821"
 0491 Honeywell Panic Pendant "5802MN2"
+\	 \
+0616 Existing Smoke Detector
 ==== =======================================================================
 
 
