@@ -1,6 +1,8 @@
 Changelog
 =========
 
+- :release:`1.2.1 <2016-12-08>`
+- :bug:`-` add more equipment to :doc:`2Gig GoControl </equipment/2gig-gc1>` documentation.
 - :release:`1.2.0 <2016-12-07>`
 - :feature:`-` add page for Vivint SkyPanel. All that's on it right now is the firmware update URL.
 - :bug:`- major` add codes for new geneation Vivint equipment to :doc:`2Gig GoControl </equipment/2gig-gc1>`.
