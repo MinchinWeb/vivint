@@ -16,4 +16,4 @@ If I've missed something, please feel free to contribute the information.
 If you've comformatable, you can submit a
 `pull request on Github <https://github.com/MinchinWeb/vivint/compare>`_
 or email me the information at
-`william.minchin@vivint.com <mailto:william.minchin@vivint.com>`_.
+`minchinweb@gmail.com <mailto:minchinweb@gmail.com>`_.

@@ -1,6 +1,8 @@
 Vivint SkyPanel
 ===============
 
+.. _v-mp2:
+
 Update URL
 ----------
 

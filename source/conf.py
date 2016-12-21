@@ -72,7 +72,7 @@ author = 'William Minchin'
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = '1.2.1'
+release = '1.3.0'
 # The short X.Y version.
 version = csp.get_version(release)
 
