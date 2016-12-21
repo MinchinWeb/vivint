@@ -1,6 +1,7 @@
 Changelog
 =========
 
+- :feature:`-` add basic page for :doc:`2Gig PIR-1 </equipment/2gig-pir1>` (for now, a link to the PDF cutsheet)
 - :release:`1.2.1 <2016-12-08>`
 - :bug:`-` add more equipment to :doc:`2Gig GoControl </equipment/2gig-gc1>` documentation.
 - :release:`1.2.0 <2016-12-07>`
