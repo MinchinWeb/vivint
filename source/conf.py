@@ -38,9 +38,12 @@ extensions = [
     'sphinx.ext.ifconfig',
     'sphinx.ext.githubpages',
     'releases',
-    'alabaster',
-    # 'cloud_sptheme.ext.relbar_toc',
+    #'alabaster',
+    # only works for html builder (not the dirhtml one)
+    #'cloud_sptheme.ext.relbar_toc',
     'cloud_sptheme.ext.index_styling',
+    # v2.0.5 will not install cleanly in Windows due to a error in `setup.py`
+    'PSphinxTheme.ext.relbar_links',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -72,7 +75,7 @@ author = 'William Minchin'
 # built documents.
 #
 # The full version, including alpha/beta/rc tags.
-release = '1.3.0'
+release = '1.3.1'
 # The short X.Y version.
 version = csp.get_version(release)
 
@@ -131,6 +134,11 @@ todo_include_todos = True
 releases_github_path = 'MinchinWeb/vivint'
 # releases_debug = True
 
+# extension: relbar_links
+relbar_links_doc = [
+   ('toc', 'contents'),
+]
+
 
 # -- Options for HTML output ----------------------------------------------
 
@@ -144,9 +152,14 @@ html_theme = 'cloud'
 # further.  For a list of options available for each theme, see the
 # documentation.
 #
-html_theme_options = {"roottarget": index_doc,
-                      "googleanalytics_id": "UA-384291-3"}
-
+html_theme_options = {}
+html_theme_options.update(
+        googleanalytics_id="UA-384291-3",
+    )
+html_theme_options.update(
+        roottarget=index_doc,
+        borderless_decor=True,
+    )
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = [csp.get_theme_dir()]
 

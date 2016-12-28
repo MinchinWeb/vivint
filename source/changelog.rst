@@ -1,6 +1,8 @@
 Changelog
 =========
 
+- :release:`1.3.1 <2016-12-28>`
+- :bug:`-` fix *toc* reference in theme header and footer
 - :release:`1.3.0 <2016-12-20>`
 - :bug:`- major` update contact email address
 - :feature:`-` add basic page for :doc:`2Gig PIR-1 </equipment/2gig-pir1>` (for now, a link to the PDF cutsheet)
