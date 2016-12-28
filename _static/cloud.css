@@ -200,9 +200,8 @@ body
     line-height: 1.5em;
 
     
-        margin: 1em 1em 0;
-        background: #1A4162;
-        background-attachment: fixed;
+        margin: 0;
+        background: #ffffff;
     
 }
 
@@ -216,15 +215,22 @@ body
 
 
 
+
+
+
+
+
+
+    div.relbar-top, div.relbar-bottom
+    {
+        background: #5682AD;
+        padding: 0 1em;
+    }
+
     
     
     
     
-
-
-
-
-
 
 
 
@@ -240,6 +246,8 @@ div.related
     color: #ffffff;
     text-shadow: 1px 1px 1px rgba(0,0,0,.3);
 
+    
+        background: none;
     
 
     
@@ -274,13 +282,6 @@ div.relbar-bottom div.related
 
     
 }
-
-
-
-    
-    
-    
-    
 
 
 
@@ -349,6 +350,8 @@ div.document
     background: #F2F2F2;
 
     
+        background: #ffffff;
+    
 }
 
     
@@ -394,25 +397,14 @@ div.body
     background-color: #ffffff;
     border-left: 1px solid rgba(0,0,0,.05);
     
-        
-            
-    
-        -moz-box-shadow: -1px 0 2px rgba(0,0,0,.05);
-        -webkit-box-shadow: -1px 0 2px rgba(0,0,0,.05);
-        -o-box-shadow: -1px 0 2px rgba(0,0,0,.05);
-        -ms-box-shadow: -1px 0 2px rgba(0,0,0,.05);
-        box-shadow: -1px 0 2px rgba(0,0,0,.05);
-    
-
-
-        
-    
 
     line-height: 1.5em;
 
     color: #000000;
     padding: 30px 20px;
 
+    
+        border-width: 0;
     
 }
 
@@ -427,15 +419,53 @@ div.body
 
 
 
+    
+
 
 div.sphinxsidebar
 {
-    margin-top: 0;
+    margin-top: 16px;
     width: 3in;
 
     font-size: 90%;
     line-height: 1.25em;
 
+    
+        margin-bottom: 16px;
+        
+    
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -o-box-sizing: border-box;
+        -ms-box-sizing: border-box;
+        box-sizing: border-box;
+    
+
+
+        background: #F2F2F2;
+        border: 1px solid rgba(0,0,0,.05);
+        
+    
+        -moz-border-radius: 0.7em;
+        -webkit-border-radius: 0.7em;
+        -o-border-radius: 0.7em;
+        -ms-border-radius: 0.7em;
+        border-radius: 0.7em;
+    
+
+
+        
+    
+        -moz-box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+        -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+        -o-box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+        -ms-box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+        box-shadow: 1px 1px 1px rgba(0,0,0,.05);
+    
+
+
+
+        
     
 }
 
@@ -856,14 +886,12 @@ button#sidebar-hide
 {
     position: absolute;
     
-        top: 0;
-        right: -1px;
+        top: 16px;
+        right: 0;
     
 
     background: transparent;
     border: 1px solid rgba(0,0,0,.05);
-    
-        border-top-width: 0;
     
 
     border-bottom-left-radius: 0.7em;
@@ -882,18 +910,25 @@ button#sidebar-show
     position: absolute;
     top: 0;
     
-        left: 0;
+        left: 10px;
     
 
     background: #F2F2F2;
     border: 1px solid rgba(0,0,0,.15);
     
-        border-top-width: 0;
-    
 
     border-bottom-right-radius: 0.7em;
     
+        border-bottom-left-radius: 0.7em;
+    
 }
+
+    
+        
+    
+    
+    
+
 
     
 
@@ -907,6 +942,12 @@ div.footer
     text-align: center;
     font-size: 75%;
 
+    
+        background: #1A4162;
+        width: auto;
+        
+        
+        box-shadow: 0 50vh 0 50vh #1A4162;
     
 }
 
@@ -939,6 +980,11 @@ div.footer + script + div.footer
     margin-top: -12px;
 }
 
+
+    div.footer, div.footer a:not(:hover)
+    {
+        color: #ffffff;
+    }
 
 
 
@@ -2185,25 +2231,9 @@ table.indextable td > dl > dd > dl
 {
     
     
-        body
+        div.relbar-top, div.relbar-bottom
         {
-            margin: 0;
-        }
-    
-
-        div.relbar-top div.related,
-        div.relbar-bottom div.related
-        {
-            
-    
-        -moz-border-radius: 0;
-        -webkit-border-radius: 0;
-        -o-border-radius: 0;
-        -ms-border-radius: 0;
-        border-radius: 0;
-    
-
-
+            padding: 0;
         }
     
 
@@ -2218,6 +2248,13 @@ table.indextable td > dl > dd > dl
     
 
             .sidebar-toggle-group { width: 2.5in; }
+        
+
+            button.sidebar-toggle#sidebar-show
+            {
+                left: 0;
+                border-bottom-left-radius: 0;
+            }
         
 
 }
